@@ -25,7 +25,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          pytest --cov=src --cov-report xml
+          pytest --cov=tests --cov-report xml
 
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@v2
