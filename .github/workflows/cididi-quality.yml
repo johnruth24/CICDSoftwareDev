@@ -48,7 +48,7 @@ jobs:
 
       # ⭐ SonarCloud Scan (correct)
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v2
+        uses: sonarsource/sonarcloud-github-action
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_SCANNER_JAVA_VERSION: "21"
