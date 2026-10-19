@@ -39,18 +39,7 @@ jobs:
           name: coverage-report
           path: coverage.xml
 
-      # ⭐ REQUIRED FIX — Install Java 21 for SonarCloud
-      - name: Set up Java 21
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '21'
-
-      # ⭐ SonarCloud Scan (correct)
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_SCANNER_JAVA_VERSION: "21"
-          env:
-          SONAR_SCANNER_OPTS: "-Dsonar.scanner.skipJreProvisioning=false"
