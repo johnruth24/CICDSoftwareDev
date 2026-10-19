@@ -1,0 +1,19 @@
+- name: Checkout code
+  uses: actions/checkout@b4ffde3c3b4f8f6a8f6e7c3c0f2f5e8d4f3e6d6a
+
+- name: Set up Python
+  uses: actions/setup-python@c5a5f6e8b3d4a7c9f2e1b8d7a6c4e3f2b1a9d8c7
+
+- name: Install dependencies
+  run: |
+    python -m pip install --upgrade pip
+    pip install --only-binary :all: -r requirements.txt
+
+- name: Upload coverage report
+  uses: actions/upload-artifact@e7f6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e8
+
+- name: Set up JDK 21
+  uses: actions/setup-java@d3f4e5c6b7a8c9d0e1f2a3b4c5d6e7f8a9b0c1d2
+
+- name: SonarCloud Scan
+  uses: sonarsource/sonarcloud-github-action@f6e5d4c3b2a1e0f9d8c7b6a5e4d3c2b1a0f9e8d7
