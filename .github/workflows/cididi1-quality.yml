@@ -52,3 +52,5 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_SCANNER_JAVA_VERSION: "21"
+          env:
+          SONAR_SCANNER_OPTS: "-Dsonar.scanner.skipJreProvisioning=false"
