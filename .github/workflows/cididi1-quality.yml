@@ -43,7 +43,7 @@ jobs:
 
       # --- This step ensures Java 21 is available for the SonarScanner ---
       - name: Set up JDK 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '21'
           distribution: 'temurin'
