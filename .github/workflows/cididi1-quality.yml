@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required by SonarCloud for proper blame/history tracking
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,7 +41,16 @@ jobs:
           name: coverage-report
           path: coverage.xml
 
+      # --- This step ensures Java 21 is available for the SonarScanner ---
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      # --- Upgraded to v3 to ensure full compatibility with modern requirements ---
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v2
+        uses: sonarsource/sonarcloud-github-action@v3
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to fetch PR details if applicable
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
