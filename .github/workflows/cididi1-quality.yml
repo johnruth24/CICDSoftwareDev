@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Required by SonarCloud for proper blame/history tracking
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,7 +33,12 @@ jobs:
       - name: Run tests with coverage
         run: |
           coverage run -m pytest
-          coverage xml
+          coverage xml -i
+
+      # ⭐ FIX COVERAGE PATHS (required for SonarCloud)
+      - name: Normalize coverage paths
+        run: |
+          sed -i 's/\/home\/runner\/work\/CICDSoftwareDev\/CICDSoftwareDev\//./g' coverage.xml
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
@@ -41,16 +46,14 @@ jobs:
           name: coverage-report
           path: coverage.xml
 
-      # --- This step ensures Java 21 is available for the SonarScanner ---
       - name: Set up JDK 21
         uses: actions/setup-java@v5
         with:
           java-version: '21'
           distribution: 'temurin'
 
-      # --- Upgraded to v3 to ensure full compatibility with modern requirements ---
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@v3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to fetch PR details if applicable
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
