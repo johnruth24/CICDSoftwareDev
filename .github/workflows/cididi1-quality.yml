@@ -53,7 +53,7 @@ jobs:
           distribution: 'temurin'
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@b16d2601a6b948e2fb26f3772276581f31daa7cd
+        uses: sonarsource/sonarcloud-github-action@e6e3b8f6b6b8c2f0f3f1c3c1b8f1e3a2b6d8f4c2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
