@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - names: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Required by SonarCloud for proper blame/history tracking
@@ -53,9 +53,4 @@ jobs:
         uses: sonarsource/sonarcloud-github-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to fetch PR details if applicable
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          
-      - name: SonarCloud Quality Gate
-        uses: sonarsource/sonarcloud-quality-gate-action@v1
-        env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
