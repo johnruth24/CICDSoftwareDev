@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --only-binary=:all: --upgrade pip
+          pip install --upgrade pip
           pip install --only-binary :all: --require-hashes -r requirements.txt
 
       - name: Run linting
