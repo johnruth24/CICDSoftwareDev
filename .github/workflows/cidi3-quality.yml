@@ -58,9 +58,7 @@ jobs:
       - name: Normalize coverage paths
         run: |
           sed -i 's|C:\\\\Users\\\\Dell\\\\Desktop\\\\cidiSoftDev\\\\tests|./tests|g' coverage.xml
-          sed -i 's|[A-Za-z]:\\\
-
-\[^"]*|./|g' coverage.xml
+          sed -i 's|[A-Za-z]:\\\\[^"]*|./|g' coverage.xml
 
       # -----------------------------
       # Upload coverage report (v5)
