@@ -32,8 +32,8 @@ jobs:
           coverage run -m pytest
           coverage xml -i
           
-          # Fix invalid coverage path warning from your SonarCloud tab
-      run: |
+      - name: Normalize coverage paths
+        run: |
           sed -i 's|C:\\\\Users\\\\Dell\\\\Desktop\\\\cidiSoftDev\\\\tests|./tests|g' coverage.xml
           sed -i 's|[A-Za-z]:\\\\[^"]*|./|g' coverage.xml
 
