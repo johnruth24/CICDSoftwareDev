@@ -2,7 +2,7 @@ name: Python CI Pipeline
 
 on:
   push:
-    branchess: [ "main", "dev" ]
+    branches: [ "main", "dev" ]
   pull_request:
     branches: [ "main" ]
 
