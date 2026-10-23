@@ -1,69 +1,69 @@
-CI Quality Gate & Reporting Workflow This project implements a Continuous Integration (CI) pipeline with automated quality gates using GitHub Actions and SonarCloud.
+CI Quality Gate & Reporting Workflow
+This project implements a Continuous Integration (CI) pipeline with automated quality gates using GitHub Actions and SonarCloud.
 
-Workflow Instructions The CI pipeline runs automatically on:
+Workflow Instructions
+The CI pipeline runs automatically on:
 
-Pushes to main and dev
+Pushes to main and dev  
+Pull requests targeting main  
 
-Pull requests targeting main
-
-Workflow Steps Checkout repository
+Workflow Steps  
+Checkout repository  
 Fetches full git history to enable SonarCloud SCM analysis.
 
-Set up Python environment
+Set up Python environment  
 Uses Python 3.12 for linting and testing.
 
-Install dependencies
+Install dependencies  
 Enforces binary‑only installation for security and reproducibility.
 
-Linting (flake8)
+Linting (flake8)  
 Ensures no linting errors are present.
 
-Run tests with coverage
+Run tests with coverage  
 Generates coverage.xml for SonarCloud.
 
-Normalize coverage paths
+Normalize coverage paths  
 Fixes GitHub runner paths so SonarCloud can map coverage correctly.
 
-Upload coverage report
+Upload coverage report  
 Stores coverage artifacts for review.
 
-Set up JDK
+Set up JDK  
 Required for SonarCloud scanner.
 
-SonarCloud Scan
-Performs:
+SonarCloud Scan  
+Performs:  
+- Code analysis  
+- Coverage reporting  
+- Vulnerability scanning  
+- Quality Gate evaluation  
 
-Code analysis
+Quality Gates Enforced  
+Minimum coverage threshold (configured in SonarCloud)  
+Zero critical vulnerabilities  
+No linting errors  
+Build must succeed before merge  
 
-Coverage reporting
+Branch Protection  
+GitHub branch protection rules require:  
+- SonarCloud Code Analysis  
+- build-and-test workflow  
+- Passing CI checks before merge  
 
-Vulnerability scanning
+Artifacts Generated  
+Coverage report (coverage.xml)  
+SonarCloud analysis results  
+CI pipeline success logs  
 
-Quality Gate evaluation
+![CI + Quality Gates](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci-quality.yml/badge.svg)
+![CI Pipeline](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci.yml/badge.svg)
 
-Quality Gates Enforced Minimum coverage threshold (configured in SonarCloud)
+# CICDSoftwareDev
+Software Development class
 
-Zero critical vulnerabilities
+PR test update
 
-No linting errors
-
-Build must succeed before merge
-
-Branch Protection GitHub branch protection rules require:
-
-SonarCloud Code Analysis
-
-build-and-test workflow
-
-Passing CI checks before merge
-
-Artifacts Generated Coverage report (coverage.xml)
-
-SonarCloud analysis results
-
-CI pipeline success logs
-
-End
 
 ![CI + Quality Gates](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci-quality.yml/badge.svg)
 
