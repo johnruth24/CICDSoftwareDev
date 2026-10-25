@@ -1,6 +1,5 @@
 name: Python CI Pipeline
 
-
 on:
   push:
     branches: [ "main", "dev" ]
