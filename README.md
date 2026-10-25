@@ -1,12 +1,3 @@
-## Continuous Integration & Quality Status
-
-### CI Pipeline Status
-![CI Status](https://github.com/<your-org>/<your-repo>/actions/workflows/python-ci.yml/badge.svg)
-
-
-
-
-
 
 CI Quality Gate & Reporting Workflow
 This project implements a Continuous Integration (CI) pipeline with automated quality gates using GitHub Actions and SonarCloud.
@@ -66,8 +57,8 @@ Coverage report (coverage.xml)
 SonarCloud analysis results  
 CI pipeline success logs  
 
-![CI + Quality Gates](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci-quality.yml/badge.svg)
-![CI Pipeline](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci.yml/badge.svg)
+![CI + Quality Gates](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/cidi5-quality.yml/badge.svg)
+![CI Pipeline](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/cidi5-quality.yml/badge.svg)
 
 # CICDSoftwareDev
 Software Development class
