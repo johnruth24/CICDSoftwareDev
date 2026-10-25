@@ -69,7 +69,7 @@ PR test update
 ![CI + Quality Gates](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci-quality.yml/badge.svg)
 
 HEAD
-![CI Pipeline](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci.yml/badge.svg)
+![CI Pipeline](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/cidi5-quality.yml/badge.svg)
 
 # CICDSoftwareDev
 Software Development class
