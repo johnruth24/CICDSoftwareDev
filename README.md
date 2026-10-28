@@ -1,3 +1,4 @@
+
 CI Quality Gate & Reporting Workflow
 This project implements a Continuous Integration (CI) pipeline with automated quality gates using GitHub Actions and SonarCloud.
 
@@ -56,8 +57,24 @@ Coverage report (coverage.xml)
 SonarCloud analysis results  
 CI pipeline success logs  
 
-![CI + Quality Gates](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci-quality.yml/badge.svg)
-![CI Pipeline](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci.yml/badge.svg)
+
+
+![CI + Quality Gates](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/cidi5-quality.yml/badge.svg)
+![CI Pipeline](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/cidi5-quality.yml/badge.svg)
+
+
+## Continuous Integration & Quality Status
+
+### CI Pipeline Status
+![CI Status](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/cidi5-quality.yml/badge.svg)
+
+### SonarCloud Quality Metrics
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=CICDSoftwareDev&metric=alert_status)](https://sonarcloud.io/summary/overall?id=CICDSoftwareDev)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CICDSoftwareDev&metric=coverage)](https://sonarcloud.io/summary/overall?id=CICDSoftwareDev)
+[![Maintainability](https://sonarcloud.io/api/project_badges/measure?project=CICDSoftwareDev&metric=sqale_rating)](https://sonarcloud.io/summary/overall?id=CICDSoftwareDev)
+[![Reliability](https://sonarcloud.io/api/project_badges/measure?project=CICDSoftwareDev&metric=reliability_rating)](https://sonarcloud.io/summary/overall?id=CICDSoftwareDev)
+[![Security](https://sonarcloud.io/api/project_badges/measure?project=CICDSoftwareDev&metric=security_rating)](https://sonarcloud.io/summary/overall?id=CICDSoftwareDev)
+
 
 # CICDSoftwareDev
 Software Development class
@@ -68,8 +85,8 @@ PR test update
 ![CI + Quality Gates](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci-quality.yml/badge.svg)
 
 HEAD
-![CI Pipeline](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/ci.yml/badge.svg)
-=======
+![CI Pipeline](https://github.com/johnruth24/CICDSoftwareDev/actions/workflows/cidi5-quality.yml/badge.svg)
+
 # CICDSoftwareDev
 Software Development class
 3f9e9c6b3ff72931ddd11c0d7d6a0dafaaca48d5
